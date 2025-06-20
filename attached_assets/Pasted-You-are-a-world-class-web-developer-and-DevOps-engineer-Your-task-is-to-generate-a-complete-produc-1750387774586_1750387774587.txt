@@ -1,0 +1,41 @@
+You are a world-class web developer and DevOps engineer. Your task is to generate a complete, production-ready React portfolio website codebase, fully styled with Tailwind CSS and animated with Framer Motion. The deliverable must include:
+
+1. **Full Directory Structure**  
+   - Root folder name: `shashank-portfolio`  
+   - Subfolders: `public/`, `src/components/`, `src/pages/`, `src/assets/`, `src/styles/`, and any config folders (`.github/workflows/`, etc.).  
+   - All file names and paths explicitly listed.
+
+2. **Complete Code for Every File**  
+   - `package.json`, `tailwind.config.js`, `postcss.config.js`, `.gitignore`, `README.md`  
+   - `public/index.html`  
+   - `src/index.js`, `src/App.js`  
+   - Component files for Hero, About, Skills, Projects, Blog, Contact, Footer  
+   - CSS import and Tailwind setup in `src/styles/globals.css`  
+   - Framer Motion animations in components  
+   - Image placeholder `/src/assets/shashank.jpg` and instructions to replace
+
+3. **Build & Deployment Instructions in README.md**  
+   - Exactly how to install dependencies (`npm install` or `yarn`), run dev server (`npm run dev`), build (`npm run build`), and preview  
+   - Steps to initialize a new Git repo from the zip:  
+     1. `unzip shashank-portfolio.zip`  
+     2. `cd shashank-portfolio`  
+     3. `git init`  
+     4. `git add .`  
+     5. `git commit -m "Initial portfolio site"`  
+     6. `gh repo create Shashank-KVS/portfolio --public --source=. --remote=origin`  
+     7. `git push -u origin main`  
+   - Hosting on GitHub Pages or Vercel: exact commands or UI steps.
+
+4. **Zip File Packaging**  
+   - After generating the code, package it into `shashank-portfolio.zip` and make it downloadable in the response.
+
+5. **Step-by-Step “First Things to Do” Section**  
+   - After downloading the zip, exactly what the user must do to get the site live (unzip → install → git init → push → deploy).
+
+Output format:  
+- A downloadable zip link (or code block with a link placeholder)  
+- A bullet-point “First things to do” list  
+- The full directory tree  
+- All file contents inline
+
+Generate this deliverable in one response.```
