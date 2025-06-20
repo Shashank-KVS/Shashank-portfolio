@@ -115,54 +115,62 @@ export default function ProjectsSection() {
                       ))}
                     </div>
                     
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm text-muted-foreground">{project.date}</span>
-                      <div className="flex space-x-2">
+                    <div className="flex flex-col gap-4">
+                      <div className="flex justify-between items-center">
+                        <span className="text-sm text-muted-foreground">{project.date}</span>
+                      </div>
+                      
+                      {/* Project Links */}
+                      <div className="flex flex-wrap gap-2">
                         {project.github && (
                           <Button
                             asChild
-                            variant="ghost"
+                            variant="outline"
                             size="sm"
-                            className="text-primary hover:text-primary/80"
+                            className="flex items-center gap-2 text-xs hover:bg-primary hover:text-primary-foreground transition-colors"
                           >
                             <a href={project.github} target="_blank" rel="noopener noreferrer">
-                              <Github className="w-4 h-4" />
+                              <Github className="w-3 h-3" />
+                              Code
                             </a>
                           </Button>
                         )}
                         {project.medium && (
                           <Button
                             asChild
-                            variant="ghost"
+                            variant="outline"
                             size="sm"
-                            className="text-primary hover:text-primary/80"
+                            className="flex items-center gap-2 text-xs hover:bg-green-600 hover:text-white transition-colors"
                           >
                             <a href={project.medium} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="w-4 h-4" />
+                              <ExternalLink className="w-3 h-3" />
+                              Article
                             </a>
                           </Button>
                         )}
                         {project.ieee && (
                           <Button
                             asChild
-                            variant="ghost"
+                            variant="outline"
                             size="sm"
-                            className="text-primary hover:text-primary/80"
+                            className="flex items-center gap-2 text-xs hover:bg-blue-600 hover:text-white transition-colors"
                           >
                             <a href={project.ieee} target="_blank" rel="noopener noreferrer">
-                              <FileText className="w-4 h-4" />
+                              <FileText className="w-3 h-3" />
+                              IEEE
                             </a>
                           </Button>
                         )}
                         {project.irjet && (
                           <Button
                             asChild
-                            variant="ghost"
+                            variant="outline"
                             size="sm"
-                            className="text-primary hover:text-primary/80"
+                            className="flex items-center gap-2 text-xs hover:bg-orange-600 hover:text-white transition-colors"
                           >
                             <a href={project.irjet} target="_blank" rel="noopener noreferrer">
-                              <FileText className="w-4 h-4" />
+                              <FileText className="w-3 h-3" />
+                              IRJET
                             </a>
                           </Button>
                         )}

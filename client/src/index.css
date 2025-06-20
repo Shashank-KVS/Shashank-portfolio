@@ -13,7 +13,7 @@
   --card-foreground: hsl(220, 13%, 18%);
   --border: hsl(214, 32%, 91%);
   --input: hsl(214, 32%, 91%);
-  --primary: hsl(217, 91%, 60%);
+  --primary: hsl(262, 83%, 58%);
   --primary-foreground: hsl(0, 0%, 98%);
   --secondary: hsl(210, 40%, 95%);
   --secondary-foreground: hsl(220, 13%, 18%);
@@ -21,16 +21,16 @@
   --accent-foreground: hsl(220, 13%, 18%);
   --destructive: hsl(0, 84%, 60%);
   --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(217, 91%, 60%);
+  --ring: hsl(262, 83%, 58%);
   --radius: 0.75rem;
   
-  /* Professional pastel colors */
-  --soft-blue: hsl(217, 91%, 85%);
-  --soft-green: hsl(142, 76%, 80%);
-  --soft-purple: hsl(262, 83%, 85%);
-  --soft-orange: hsl(25, 95%, 80%);
-  --soft-pink: hsl(330, 81%, 85%);
-  --soft-teal: hsl(173, 58%, 78%);
+  /* Professional gradient colors */
+  --gradient-start: hsl(262, 83%, 58%);
+  --gradient-end: hsl(310, 100%, 69%);
+  --accent-blue: hsl(217, 91%, 60%);
+  --accent-green: hsl(142, 76%, 55%);
+  --accent-orange: hsl(25, 95%, 60%);
+  --accent-teal: hsl(173, 58%, 58%);
 }
 
 .dark {
@@ -44,7 +44,7 @@
   --card-foreground: hsl(210, 20%, 98%);
   --border: hsl(216, 34%, 17%);
   --input: hsl(216, 34%, 17%);
-  --primary: hsl(217, 91%, 60%);
+  --primary: hsl(262, 83%, 58%);
   --primary-foreground: hsl(222, 84%, 5%);
   --secondary: hsl(222, 47%, 11%);
   --secondary-foreground: hsl(210, 20%, 98%);
@@ -55,13 +55,13 @@
   --ring: hsl(216, 34%, 17%);
   --radius: 0.75rem;
   
-  /* Dark mode pastel adjustments */
-  --soft-blue: hsl(217, 91%, 25%);
-  --soft-green: hsl(142, 76%, 25%);
-  --soft-purple: hsl(262, 83%, 25%);
-  --soft-orange: hsl(25, 95%, 25%);
-  --soft-pink: hsl(330, 81%, 25%);
-  --soft-teal: hsl(173, 58%, 25%);
+  /* Dark mode gradient adjustments */
+  --gradient-start: hsl(262, 83%, 58%);
+  --gradient-end: hsl(310, 100%, 69%);
+  --accent-blue: hsl(217, 91%, 60%);
+  --accent-green: hsl(142, 76%, 55%);
+  --accent-orange: hsl(25, 95%, 60%);
+  --accent-teal: hsl(173, 58%, 58%);
 }
 
 @layer base {
@@ -77,18 +77,18 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(173, 58%, 65%));
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .hero-bg {
-    background: linear-gradient(135deg, hsl(217, 91%, 95%), hsl(210, 40%, 98%));
+    background: linear-gradient(135deg, hsl(262, 83%, 98%), hsl(310, 100%, 98%));
   }
   
   .dark .hero-bg {
-    background: linear-gradient(135deg, hsl(224, 71%, 4%), hsl(216, 34%, 8%));
+    background: linear-gradient(135deg, hsl(224, 71%, 4%), hsl(262, 50%, 8%));
   }
   
   .card-hover {
@@ -97,26 +97,26 @@
   
   .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px hsl(217, 91%, 60%, 0.1);
+    box-shadow: 0 20px 40px hsl(262, 83%, 58%, 0.15);
   }
   
   .dark .card-hover:hover {
-    box-shadow: 0 20px 40px hsl(217, 91%, 60%, 0.3);
+    box-shadow: 0 20px 40px hsl(262, 83%, 58%, 0.25);
   }
   
   .skill-progress {
     transition: width 1s ease-in-out;
   }
   
-  .pastel-gradient-1 {
-    background: linear-gradient(135deg, var(--soft-blue), var(--soft-purple));
+  .skill-icon-hover {
+    transition: all 0.3s ease;
   }
   
-  .pastel-gradient-2 {
-    background: linear-gradient(135deg, var(--soft-green), var(--soft-teal));
+  .skill-icon-hover:hover {
+    transform: scale(1.1) rotate(5deg);
   }
   
-  .pastel-gradient-3 {
-    background: linear-gradient(135deg, var(--soft-orange), var(--soft-pink));
+  .project-gradient {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   }
 }

@@ -97,9 +97,11 @@ This is a professional portfolio website for Venkata Shashank Kowtharapu, an AI 
 Changelog:
 - June 20, 2025: Initial setup with React portfolio
 - June 20, 2025: Updated with professional pastel color scheme, automatic system theme detection, user profile image integration, clickable skills linking to documentation, and improved dark mode contrast
+- June 20, 2025: Redesigned skills section with icon-based layout instead of progress bars, improved project link alignment with labeled buttons, and updated to eye-catching purple-pink gradient color scheme
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
-Design preferences: Professional pastel colors, automatic system theme detection, proper dark mode support with high contrast text.
+Design preferences: Eye-catching purple-pink gradient color scheme, automatic system theme detection, proper dark mode support with high contrast text.
 Links and references: Use actual profile links provided by user, make skills clickable to official documentation.
+UI preferences: Icon-based skills layout instead of progress bars, well-aligned project links with clear labels.

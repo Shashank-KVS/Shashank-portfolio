@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Brain, Cloud, Code, Award } from "lucide-react";
+import { ExternalLink, Brain, Cloud, Code, Award, BarChart3, Wrench } from "lucide-react";
 import { skills, certifications } from "@/lib/data";
 
 const iconMap = {
   brain: Brain,
   cloud: Cloud,
   code: Code,
+  chart: BarChart3,
+  tools: Wrench,
   microsoft: Award,
   python: Code,
 };
@@ -37,53 +39,47 @@ export default function SkillsSection() {
         </div>
 
         {/* Skills Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {skills.map((skillCategory, categoryIndex) => {
             const IconComponent = iconMap[skillCategory.icon as keyof typeof iconMap];
             return (
               <motion.div
                 key={skillCategory.category}
-                className="bg-muted/50 p-6 rounded-xl card-hover"
+                className="bg-gradient-to-br from-card to-muted/30 p-6 rounded-xl card-hover border border-border/50"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5, scale: 1.02 }}
               >
-                <div className="flex items-center mb-4">
-                  <IconComponent className="text-primary text-2xl mr-3" />
-                  <h3 className="text-xl font-bold">{skillCategory.category}</h3>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                    {IconComponent && <IconComponent className="text-primary text-2xl" />}
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{skillCategory.category}</h3>
                 </div>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-3">
                   {skillCategory.skills.map((skill, skillIndex) => (
-                    <motion.div 
+                    <motion.a
                       key={skill.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
+                      href={skill.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center p-3 bg-background/50 hover:bg-primary/5 rounded-lg transition-all duration-300 border border-transparent hover:border-primary/20"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: (categoryIndex * 0.1) + (skillIndex * 0.05) }}
                       viewport={{ once: true }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.98 }}
                     >
-                      <div className="flex justify-between mb-1">
-                        <a 
-                          href={skill.link} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
-                        >
-                          {skill.name}
-                        </a>
-                        <span className="text-sm text-primary">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-muted rounded-full h-2">
-                        <motion.div 
-                          className="skill-progress bg-primary h-2 rounded-full"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: (categoryIndex * 0.2) + (skillIndex * 0.1) }}
-                          viewport={{ once: true }}
-                        />
-                      </div>
-                    </motion.div>
+                      <span className="text-xl mr-2 group-hover:scale-110 transition-transform">
+                        {skill.icon}
+                      </span>
+                      <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                        {skill.name}
+                      </span>
+                    </motion.a>
                   ))}
                 </div>
               </motion.div>

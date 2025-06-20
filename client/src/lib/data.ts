@@ -19,33 +19,64 @@ export const personalInfo = {
 
 export const skills = [
   {
+    category: "Programming Languages",
+    icon: "code",
+    skills: [
+      { name: "Python", icon: "🐍", link: "https://python.org" },
+      { name: "SQL", icon: "🗄️", link: "https://www.postgresql.org/docs/" },
+      { name: "Bash", icon: "💻", link: "https://www.gnu.org/software/bash/" },
+      { name: "R", icon: "📊", link: "https://www.r-project.org/" }
+    ]
+  },
+  {
     category: "AI & Machine Learning",
     icon: "brain",
     skills: [
-      { name: "LLM Development", level: 95, link: "https://huggingface.co/docs" },
-      { name: "PyTorch", level: 90, link: "https://pytorch.org" },
-      { name: "TensorFlow", level: 88, link: "https://tensorflow.org" },
-      { name: "NLP & NLU", level: 92, link: "https://spacy.io" }
+      { name: "LLM Development", icon: "🤖", link: "https://huggingface.co/docs" },
+      { name: "PyTorch", icon: "🔥", link: "https://pytorch.org" },
+      { name: "TensorFlow", icon: "🧠", link: "https://tensorflow.org" },
+      { name: "Scikit-learn", icon: "🔬", link: "https://scikit-learn.org" },
+      { name: "Hugging Face", icon: "🤗", link: "https://huggingface.co" },
+      { name: "LangChain", icon: "🔗", link: "https://langchain.com" },
+      { name: "NLP & NLU", icon: "📝", link: "https://spacy.io" },
+      { name: "Computer Vision", icon: "👁️", link: "https://opencv.org" },
+      { name: "Time Series", icon: "📈", link: "https://www.statsmodels.org" }
     ]
   },
   {
     category: "Cloud & MLOps",
     icon: "cloud",
     skills: [
-      { name: "Azure ML Studio", level: 96, link: "https://azure.microsoft.com/en-us/services/machine-learning/" },
-      { name: "CI/CD Pipelines", level: 88, link: "https://docs.github.com/en/actions" },
-      { name: "Docker", level: 85, link: "https://docs.docker.com" },
-      { name: "Kubernetes", level: 80, link: "https://kubernetes.io/docs/" }
+      { name: "Azure ML Studio", icon: "☁️", link: "https://azure.microsoft.com/en-us/services/machine-learning/" },
+      { name: "Azure Cognitive Services", icon: "🧠", link: "https://azure.microsoft.com/en-us/services/cognitive-services/" },
+      { name: "PySpark", icon: "⚡", link: "https://spark.apache.org/docs/latest/api/python/" },
+      { name: "MLflow", icon: "🎯", link: "https://mlflow.org" },
+      { name: "Docker", icon: "🐳", link: "https://docs.docker.com" },
+      { name: "Jenkins", icon: "🏗️", link: "https://www.jenkins.io" },
+      { name: "Git", icon: "📋", link: "https://git-scm.com" },
+      { name: "CI/CD", icon: "🔄", link: "https://docs.github.com/en/actions" }
     ]
   },
   {
-    category: "Programming",
-    icon: "code",
+    category: "Data & Analytics",
+    icon: "chart",
     skills: [
-      { name: "Python", level: 98, link: "https://python.org" },
-      { name: "SQL", level: 87, link: "https://www.postgresql.org/docs/" },
-      { name: "NoSQL", level: 85, link: "https://www.mongodb.com/docs/" },
-      { name: "API Development", level: 90, link: "https://fastapi.tiangolo.com" }
+      { name: "NumPy", icon: "🔢", link: "https://numpy.org" },
+      { name: "Pandas", icon: "🐼", link: "https://pandas.pydata.org" },
+      { name: "Tableau", icon: "📊", link: "https://www.tableau.com" },
+      { name: "KQL", icon: "📋", link: "https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/" },
+      { name: "ETL Processes", icon: "🔄", link: "https://azure.microsoft.com/en-us/services/data-factory/" },
+      { name: "Data Visualization", icon: "📈", link: "https://plotly.com" }
+    ]
+  },
+  {
+    category: "Development Tools",
+    icon: "tools",
+    skills: [
+      { name: "API Development", icon: "🌐", link: "https://fastapi.tiangolo.com" },
+      { name: "REST APIs", icon: "🔌", link: "https://restfulapi.net" },
+      { name: "Jupyter", icon: "📓", link: "https://jupyter.org" },
+      { name: "VS Code", icon: "💻", link: "https://code.visualstudio.com" }
     ]
   }
 ];
@@ -135,8 +166,9 @@ export const projects = [
     tags: ["FinTech", "ML", "Risk Analysis"],
     github: "https://github.com/Shashank-KVS/credit-risk-assessment",
     medium: "https://medium.com/@kvshashank10081998/credit-risk-assessment",
+    irjet: "https://www.irjet.net/archives/V8/i8/IRJET-V8I8423.pdf",
     icon: "calculator",
-    gradient: "from-red-500 to-orange-500"
+    gradient: "from-amber-400 to-orange-500"
   },
   {
     id: 6,
