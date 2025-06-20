@@ -18,7 +18,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-dark-bg dark:bg-black text-white py-12">
+    <footer className="bg-foreground text-background py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <motion.div 
@@ -32,7 +32,7 @@ export default function Footer() {
           </motion.div>
           
           <motion.p 
-            className="text-gray-400 mb-8"
+            className="text-background/70 mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -52,6 +52,7 @@ export default function Footer() {
               { href: personalInfo.linkedin, icon: Linkedin },
               { href: personalInfo.github, icon: Github },
               { href: personalInfo.medium, icon: FileText },
+              { href: personalInfo.researchgate, icon: FileText },
               { href: `mailto:${personalInfo.email}`, icon: Mail },
             ].map((social, index) => (
               <motion.a
@@ -59,7 +60,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary transition-colors"
+                className="text-background/70 hover:text-primary transition-colors"
                 whileHover={{ scale: 1.2, y: -2 }}
                 whileTap={{ scale: 0.9 }}
               >
@@ -108,13 +109,13 @@ export default function Footer() {
           </motion.div>
 
           <motion.div 
-            className="border-t border-gray-800 pt-8"
+            className="border-t border-background/20 pt-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <p className="text-gray-500">
+            <p className="text-background/50">
               © 2025 Venkata Shashank Kowtharapu. All rights reserved.
             </p>
           </motion.div>

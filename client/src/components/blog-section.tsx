@@ -11,7 +11,7 @@ const iconMap = {
 
 export default function BlogSection() {
   return (
-    <section id="blog" className="py-20 bg-white dark:bg-dark-bg">
+    <section id="blog" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -24,7 +24,7 @@ export default function BlogSection() {
             Blog & Media
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 dark:text-gray-400"
+            className="text-xl text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -40,7 +40,7 @@ export default function BlogSection() {
             return (
               <motion.div
                 key={post.title}
-                className="bg-gray-50 dark:bg-dark-card rounded-xl overflow-hidden shadow-lg card-hover"
+                className="bg-muted/50 rounded-xl overflow-hidden shadow-lg card-hover"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -54,12 +54,12 @@ export default function BlogSection() {
                 
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{post.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+                  <p className="text-muted-foreground mb-4 text-sm">
                     {post.description}
                   </p>
                   
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-sm text-gray-500">{post.date}</span>
+                    <span className="text-sm text-muted-foreground">{post.date}</span>
                     <span className="text-sm text-primary">{post.readTime}</span>
                   </div>
                   

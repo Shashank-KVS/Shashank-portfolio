@@ -43,9 +43,8 @@ export default function HeroSection() {
                 ease: "easeInOut"
               }}
             >
-              <div className="w-full h-full rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                <User className="w-24 h-24 text-gray-400" />
-                {/* Replace with: <img src="/assets/shashank.jpg" alt="Venkata Shashank Kowtharapu" className="w-full h-full rounded-full object-cover" /> */}
+              <div className="w-full h-full rounded-full overflow-hidden">
+                <img src="/assets/shashank.jpg" alt="Venkata Shashank Kowtharapu" className="w-full h-full rounded-full object-cover" />
               </div>
             </motion.div>
           </motion.div>
@@ -57,11 +56,11 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <span className="gradient-text">Venkata Shashank</span><br />
-            <span className="text-gray-700 dark:text-gray-300">Kowtharapu</span>
+            <span className="text-foreground">Kowtharapu</span>
           </motion.h1>
 
           <motion.p 
-            className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -70,7 +69,7 @@ export default function HeroSection() {
           </motion.p>
 
           <motion.p 
-            className="text-lg text-gray-500 dark:text-gray-500 mb-12 max-w-2xl mx-auto"
+            className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}

@@ -61,7 +61,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -74,7 +74,7 @@ export default function ContactSection() {
             Let's Connect
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 dark:text-gray-400"
+            className="text-xl text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -87,7 +87,7 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div
-            className="bg-white dark:bg-dark-card p-8 rounded-xl shadow-lg"
+            className="bg-card p-8 rounded-xl shadow-lg"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -162,7 +162,7 @@ export default function ContactSection() {
           {/* Contact Info */}
           <div className="space-y-8">
             <motion.div
-              className="bg-white dark:bg-dark-card p-8 rounded-xl shadow-lg"
+              className="bg-card p-8 rounded-xl shadow-lg"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -178,7 +178,7 @@ export default function ContactSection() {
                   <Mail className="text-primary text-xl mr-4" />
                   <a 
                     href={`mailto:${personalInfo.email}`} 
-                    className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
+                    className="text-foreground hover:text-primary transition-colors"
                   >
                     {personalInfo.email}
                   </a>
@@ -192,7 +192,7 @@ export default function ContactSection() {
                   <Phone className="text-primary text-xl mr-4" />
                   <a 
                     href={`tel:${personalInfo.phone}`} 
-                    className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
+                    className="text-foreground hover:text-primary transition-colors"
                   >
                     {personalInfo.phone}
                   </a>
@@ -204,7 +204,7 @@ export default function ContactSection() {
                   transition={{ duration: 0.2 }}
                 >
                   <MapPin className="text-primary text-xl mr-4" />
-                  <span className="text-gray-700 dark:text-gray-300">
+                  <span className="text-foreground">
                     {personalInfo.location}
                   </span>
                 </motion.div>
@@ -217,6 +217,7 @@ export default function ContactSection() {
                     { href: personalInfo.linkedin, icon: Linkedin, color: "bg-primary" },
                     { href: personalInfo.github, icon: Github, color: "bg-gray-800" },
                     { href: personalInfo.medium, icon: FileText, color: "bg-green-600" },
+                    { href: personalInfo.researchgate, icon: FileText, color: "bg-blue-600" },
                   ].map((social, index) => (
                     <motion.a
                       key={social.href}
@@ -236,7 +237,7 @@ export default function ContactSection() {
 
             {/* Resume Download */}
             <motion.div
-              className="bg-white dark:bg-dark-card p-8 rounded-xl shadow-lg text-center"
+              className="bg-card p-8 rounded-xl shadow-lg text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -244,7 +245,7 @@ export default function ContactSection() {
             >
               <FileText className="text-primary text-4xl mb-4 mx-auto" />
               <h3 className="text-xl font-bold mb-4">Download Resume</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-6">
+              <p className="text-muted-foreground mb-6">
                 Get a detailed overview of my experience and qualifications
               </p>
               <Button

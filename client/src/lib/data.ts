@@ -4,9 +4,10 @@ export const personalInfo = {
   email: "kvshashank10081998@gmail.com",
   phone: "+1 (343) 989-4078",
   location: "Mississauga, Ontario, Canada",
-  linkedin: "https://www.linkedin.com/in/shashank-kowtharapu/",
+  linkedin: "https://www.linkedin.com/in/shashank-kowtharapu",
   github: "https://github.com/Shashank-KVS",
   medium: "https://medium.com/@kvshashank10081998",
+  researchgate: "https://www.researchgate.net/profile/Venkata-Shashank-Kowtharapu",
   bio: "Innovative AI and Machine Learning professional with 4+ years of experience specializing in Generative AI, MLOps, and large-scale model deployment. Proven expertise in designing and automating AI workflows, optimizing model performance, and implementing scalable solutions using Azure ML Studio, Hugging Face, and Llama.",
   extendedBio: "Certified Azure Cognitive Services Specialist and AZAI Generative AI Specialist, with deep proficiency in LLM development, cloud-based ML pipelines, and production-ready AI systems.",
   stats: {
@@ -21,27 +22,30 @@ export const skills = [
     category: "AI & Machine Learning",
     icon: "brain",
     skills: [
-      { name: "LLM Development", level: 95 },
-      { name: "PyTorch/TensorFlow", level: 90 },
-      { name: "NLP & NLU", level: 92 }
+      { name: "LLM Development", level: 95, link: "https://huggingface.co/docs" },
+      { name: "PyTorch", level: 90, link: "https://pytorch.org" },
+      { name: "TensorFlow", level: 88, link: "https://tensorflow.org" },
+      { name: "NLP & NLU", level: 92, link: "https://spacy.io" }
     ]
   },
   {
     category: "Cloud & MLOps",
     icon: "cloud",
     skills: [
-      { name: "Azure ML Studio", level: 96 },
-      { name: "CI/CD Pipelines", level: 88 },
-      { name: "Docker/Kubernetes", level: 85 }
+      { name: "Azure ML Studio", level: 96, link: "https://azure.microsoft.com/en-us/services/machine-learning/" },
+      { name: "CI/CD Pipelines", level: 88, link: "https://docs.github.com/en/actions" },
+      { name: "Docker", level: 85, link: "https://docs.docker.com" },
+      { name: "Kubernetes", level: 80, link: "https://kubernetes.io/docs/" }
     ]
   },
   {
     category: "Programming",
     icon: "code",
     skills: [
-      { name: "Python", level: 98 },
-      { name: "SQL/NoSQL", level: 87 },
-      { name: "API Development", level: 90 }
+      { name: "Python", level: 98, link: "https://python.org" },
+      { name: "SQL", level: 87, link: "https://www.postgresql.org/docs/" },
+      { name: "NoSQL", level: 85, link: "https://www.mongodb.com/docs/" },
+      { name: "API Development", level: 90, link: "https://fastapi.tiangolo.com" }
     ]
   }
 ];
@@ -84,7 +88,7 @@ export const projects = [
     github: "https://github.com/Shashank-KVS/ai-financial-risk-monitor",
     medium: "https://medium.com/@kvshashank10081998/ai-financial-risk-monitoring",
     icon: "chart-line",
-    gradient: "from-green-400 to-blue-500"
+    gradient: "from-emerald-400 to-teal-500"
   },
   {
     id: 2,
@@ -118,9 +122,9 @@ export const projects = [
     category: ["research", "ai"],
     tags: ["IoT", "Edge AI", "Research"],
     github: "https://github.com/Shashank-KVS/smart-farming-iot-ai",
-    ieee: "https://ieeexplore.ieee.org/document/9985023",
+    ieee: "https://ieeexplore.ieee.org/document/9985023/references#references",
     icon: "seedling",
-    gradient: "from-green-500 to-emerald-500"
+    gradient: "from-green-400 to-emerald-400"
   },
   {
     id: 5,
@@ -144,7 +148,7 @@ export const projects = [
     github: "https://github.com/Shashank-KVS/traffic-signal-ai-optimization",
     medium: "https://medium.com/@kvshashank10081998/traffic-signal-optimization",
     icon: "traffic-light",
-    gradient: "from-yellow-500 to-red-500"
+    gradient: "from-yellow-400 to-orange-400"
   }
 ];
 
@@ -165,7 +169,7 @@ export const blogPosts = [
     readTime: "8 min read",
     link: "https://medium.com/@kvshashank10081998/mlops-azure-best-practices",
     icon: "cogs",
-    gradient: "from-green-500 to-blue-500"
+    gradient: "from-green-400 to-blue-400"
   },
   {
     title: "Fine-tuning LLMs for Domain-Specific Tasks",

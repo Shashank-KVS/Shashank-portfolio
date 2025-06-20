@@ -26,7 +26,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/90 dark:bg-dark-bg/90 backdrop-blur-sm z-50 border-b border-gray-200 dark:border-gray-700">
+    <nav className="fixed top-0 w-full bg-background/90 backdrop-blur-sm z-50 border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div 
@@ -44,7 +44,7 @@ export default function Navigation() {
               <motion.button
                 key={item.href}
                 onClick={() => scrollTo(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
+                className="text-foreground hover:text-primary transition-colors"
                 whileHover={{ y: -2 }}
                 whileTap={{ y: 0 }}
               >
@@ -83,14 +83,14 @@ export default function Navigation() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden border-t border-gray-200 dark:border-gray-700"
+              className="md:hidden border-t border-border"
             >
               <div className="px-4 py-2 space-y-2">
                 {navItems.map((item) => (
                   <motion.button
                     key={item.href}
                     onClick={() => scrollTo(item.href)}
-                    className="block w-full text-left py-2 text-gray-700 dark:text-gray-300 hover:text-primary transition-colors"
+                    className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors"
                     whileHover={{ x: 5 }}
                   >
                     {item.label}

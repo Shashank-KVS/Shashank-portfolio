@@ -28,7 +28,14 @@ export function ThemeProvider({
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
     if (typeof window !== "undefined") {
-      return (localStorage.getItem(storageKey) as Theme) || defaultTheme;
+      const savedTheme = localStorage.getItem(storageKey) as Theme;
+      if (savedTheme) {
+        return savedTheme;
+      }
+      // Auto-detect system preference
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
+      }
     }
     return defaultTheme;
   });
@@ -37,7 +44,19 @@ export function ThemeProvider({
     const root = window.document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(theme);
-  }, [theme]);
+
+    // Listen for system theme changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      const savedTheme = localStorage.getItem(storageKey);
+      if (!savedTheme) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [theme, storageKey]);
 
   const value = {
     theme,

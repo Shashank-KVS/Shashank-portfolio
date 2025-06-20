@@ -4,7 +4,7 @@ import { personalInfo } from "@/lib/data";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="about" className="py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -17,7 +17,7 @@ export default function AboutSection() {
             About Me
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 dark:text-gray-400"
+            className="text-xl text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -40,9 +40,8 @@ export default function AboutSection() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full h-full rounded-2xl bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                  <User className="w-32 h-32 text-gray-400" />
-                  {/* Replace with: <img src="/assets/shashank-professional.jpg" alt="Shashank Professional Photo" className="w-full h-full rounded-2xl object-cover" /> */}
+                <div className="w-full h-full rounded-2xl overflow-hidden">
+                  <img src="/assets/shashank.jpg" alt="Shashank Professional Photo" className="w-full h-full rounded-2xl object-cover" />
                 </div>
               </motion.div>
               <motion.div 
@@ -67,13 +66,13 @@ export default function AboutSection() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+            <h3 className="text-3xl font-bold mb-6 text-foreground">
               Building the Future with AI
             </h3>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               {personalInfo.bio}
             </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               {personalInfo.extendedBio}
             </p>
 
@@ -86,7 +85,7 @@ export default function AboutSection() {
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="text-center p-4 bg-white dark:bg-dark-card rounded-lg shadow-lg card-hover"
+                  className="text-center p-4 bg-card rounded-lg shadow-lg card-hover"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -96,7 +95,7 @@ export default function AboutSection() {
                   <div className="text-3xl font-bold text-primary mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <div className="text-sm text-muted-foreground">
                     {stat.label}
                   </div>
                 </motion.div>

@@ -13,7 +13,7 @@ const iconMap = {
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-white dark:bg-dark-bg">
+    <section id="skills" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -26,7 +26,7 @@ export default function SkillsSection() {
             Skills & Certifications
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 dark:text-gray-400"
+            className="text-xl text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -43,7 +43,7 @@ export default function SkillsSection() {
             return (
               <motion.div
                 key={skillCategory.category}
-                className="bg-gray-50 dark:bg-dark-card p-6 rounded-xl card-hover"
+                className="bg-muted/50 p-6 rounded-xl card-hover"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
@@ -64,12 +64,17 @@ export default function SkillsSection() {
                       viewport={{ once: true }}
                     >
                       <div className="flex justify-between mb-1">
-                        <span className="text-sm text-gray-600 dark:text-gray-400">
+                        <a 
+                          href={skill.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                        >
                           {skill.name}
-                        </span>
+                        </a>
                         <span className="text-sm text-primary">{skill.level}%</span>
                       </div>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <div className="w-full bg-muted rounded-full h-2">
                         <motion.div 
                           className="skill-progress bg-primary h-2 rounded-full"
                           initial={{ width: 0 }}
@@ -104,7 +109,7 @@ export default function SkillsSection() {
             return (
               <motion.div
                 key={cert.name}
-                className="bg-white dark:bg-dark-card p-6 rounded-xl shadow-lg card-hover text-center"
+                className="bg-card p-6 rounded-xl shadow-lg card-hover text-center"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -115,7 +120,7 @@ export default function SkillsSection() {
                   <IconComponent className="text-white text-2xl" />
                 </div>
                 <h4 className="font-bold mb-2">{cert.name}</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-sm text-muted-foreground mb-4">
                   {cert.provider}
                 </p>
                 <Button

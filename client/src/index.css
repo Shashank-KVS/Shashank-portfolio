@@ -3,56 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(220, 13%, 18%);
+  --muted: hsl(210, 40%, 95%);
+  --muted-foreground: hsl(215, 16%, 47%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(220, 13%, 18%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
-  --radius: 0.5rem;
+  --card-foreground: hsl(220, 13%, 18%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(210, 40%, 95%);
+  --secondary-foreground: hsl(220, 13%, 18%);
+  --accent: hsl(210, 40%, 95%);
+  --accent-foreground: hsl(220, 13%, 18%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(217, 91%, 60%);
+  --radius: 0.75rem;
   
-  /* Custom Azure colors */
-  --azure: hsl(207, 90%, 54%);
-  --azure-dark: hsl(208, 74%, 35%);
-  --azure-light: hsl(190, 100%, 47%);
-  --dark-bg: hsl(228, 84%, 8%);
-  --dark-card: hsl(229, 41%, 11%);
+  /* Professional pastel colors */
+  --soft-blue: hsl(217, 91%, 85%);
+  --soft-green: hsl(142, 76%, 80%);
+  --soft-purple: hsl(262, 83%, 85%);
+  --soft-orange: hsl(25, 95%, 80%);
+  --soft-pink: hsl(330, 81%, 85%);
+  --soft-teal: hsl(173, 58%, 78%);
 }
 
 .dark {
-  --background: hsl(240, 10%, 3.9%);
-  --foreground: hsl(0, 0%, 98%);
-  --muted: hsl(240, 3.7%, 15.9%);
-  --muted-foreground: hsl(240, 5%, 64.9%);
-  --popover: hsl(240, 10%, 3.9%);
-  --popover-foreground: hsl(0, 0%, 98%);
-  --card: hsl(240, 10%, 3.9%);
-  --card-foreground: hsl(0, 0%, 98%);
-  --border: hsl(240, 3.7%, 15.9%);
-  --input: hsl(240, 3.7%, 15.9%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(240, 3.7%, 15.9%);
-  --secondary-foreground: hsl(0, 0%, 98%);
-  --accent: hsl(240, 3.7%, 15.9%);
-  --accent-foreground: hsl(0, 0%, 98%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(240, 4.9%, 83.9%);
-  --radius: 0.5rem;
+  --background: hsl(224, 71%, 4%);
+  --foreground: hsl(210, 20%, 98%);
+  --muted: hsl(223, 47%, 11%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(224, 71%, 4%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --card: hsl(224, 71%, 4%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --border: hsl(216, 34%, 17%);
+  --input: hsl(216, 34%, 17%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 84%, 5%);
+  --secondary: hsl(222, 47%, 11%);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --accent: hsl(216, 34%, 17%);
+  --accent-foreground: hsl(210, 20%, 98%);
+  --destructive: hsl(0, 63%, 31%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(216, 34%, 17%);
+  --radius: 0.75rem;
+  
+  /* Dark mode pastel adjustments */
+  --soft-blue: hsl(217, 91%, 25%);
+  --soft-green: hsl(142, 76%, 25%);
+  --soft-purple: hsl(262, 83%, 25%);
+  --soft-orange: hsl(25, 95%, 25%);
+  --soft-pink: hsl(330, 81%, 25%);
+  --soft-teal: hsl(173, 58%, 25%);
 }
 
 @layer base {
@@ -68,18 +77,18 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(135deg, hsl(207, 90%, 54%), hsl(190, 100%, 47%));
+    background: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(173, 58%, 65%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
   .hero-bg {
-    background: linear-gradient(135deg, hsl(207, 90%, 54%, 0.1), hsl(190, 100%, 47%, 0.05));
+    background: linear-gradient(135deg, hsl(217, 91%, 95%), hsl(210, 40%, 98%));
   }
   
   .dark .hero-bg {
-    background: linear-gradient(135deg, hsl(228, 84%, 8%, 0.95), hsl(229, 41%, 11%, 0.8));
+    background: linear-gradient(135deg, hsl(224, 71%, 4%), hsl(216, 34%, 8%));
   }
   
   .card-hover {
@@ -88,10 +97,26 @@
   
   .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px hsl(207, 90%, 54%, 0.1);
+    box-shadow: 0 20px 40px hsl(217, 91%, 60%, 0.1);
+  }
+  
+  .dark .card-hover:hover {
+    box-shadow: 0 20px 40px hsl(217, 91%, 60%, 0.3);
   }
   
   .skill-progress {
     transition: width 1s ease-in-out;
+  }
+  
+  .pastel-gradient-1 {
+    background: linear-gradient(135deg, var(--soft-blue), var(--soft-purple));
+  }
+  
+  .pastel-gradient-2 {
+    background: linear-gradient(135deg, var(--soft-green), var(--soft-teal));
+  }
+  
+  .pastel-gradient-3 {
+    background: linear-gradient(135deg, var(--soft-orange), var(--soft-pink));
   }
 }

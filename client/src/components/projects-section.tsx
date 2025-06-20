@@ -29,7 +29,7 @@ export default function ProjectsSection() {
   );
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -42,7 +42,7 @@ export default function ProjectsSection() {
             Projects & Publications
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-600 dark:text-gray-400"
+            className="text-xl text-muted-foreground"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -67,8 +67,8 @@ export default function ProjectsSection() {
               variant={activeFilter === category.key ? "default" : "outline"}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 activeFilter === category.key 
-                  ? "bg-primary text-white" 
-                  : "bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-primary hover:text-white"
+                  ? "bg-primary text-primary-foreground" 
+                  : "bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground"
               }`}
             >
               {category.label}
@@ -87,7 +87,7 @@ export default function ProjectsSection() {
               return (
                 <motion.div
                   key={project.id}
-                  className="bg-white dark:bg-dark-card rounded-xl shadow-lg overflow-hidden card-hover"
+                  className="bg-card rounded-xl shadow-lg overflow-hidden card-hover"
                   layout
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -102,7 +102,7 @@ export default function ProjectsSection() {
                   
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
+                    <p className="text-muted-foreground mb-4 text-sm">
                       {project.description}
                     </p>
                     
@@ -116,7 +116,7 @@ export default function ProjectsSection() {
                     </div>
                     
                     <div className="flex justify-between items-center">
-                      <span className="text-sm text-gray-500">{project.date}</span>
+                      <span className="text-sm text-muted-foreground">{project.date}</span>
                       <div className="flex space-x-2">
                         {project.github && (
                           <Button
@@ -150,6 +150,18 @@ export default function ProjectsSection() {
                             className="text-primary hover:text-primary/80"
                           >
                             <a href={project.ieee} target="_blank" rel="noopener noreferrer">
+                              <FileText className="w-4 h-4" />
+                            </a>
+                          </Button>
+                        )}
+                        {project.irjet && (
+                          <Button
+                            asChild
+                            variant="ghost"
+                            size="sm"
+                            className="text-primary hover:text-primary/80"
+                          >
+                            <a href={project.irjet} target="_blank" rel="noopener noreferrer">
                               <FileText className="w-4 h-4" />
                             </a>
                           </Button>
