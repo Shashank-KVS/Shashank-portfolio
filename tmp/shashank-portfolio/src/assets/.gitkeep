@@ -1,0 +1,8 @@
+# Place your images here
+# Replace the placeholder user icons with:
+# - shashank.jpg (your professional photo)
+# - Any other assets you need
+
+# Note: Update the image paths in the components:
+# - HeroSection.tsx line 47
+# - AboutSection.tsx line 44
