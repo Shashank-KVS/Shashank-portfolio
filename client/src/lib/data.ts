@@ -112,21 +112,21 @@ export const recommendations = [
   {
     name: "Yu Han Mao",
     title: "Customer-obsessed data plumber",
-    avatar: "/assets/yu-han-mao.png",
+    avatar: "assets/yu-han-mao.png",
     recommendation: "I worked with Shashank in the Azure Machine Learning team at LTIMindtree. He was a notably fast learner of complex, messy technologies in cloud data engineering, and good at thinking on his feet to adapt to constantly changing features and requirements. Most importantly, I really enjoyed his enthusiasm and the sense of humour he brought to the team. I miss working with him and would highly recommend him for positions requiring both deep technical knowledge and good team spirit.",
     linkedin: "https://www.linkedin.com/in/yu-han-mao/",
   },
   {
     name: "Jennifer Williams",
     title: "Technical Solutions & Data Specialist | SQL • API Integrations • Power BI",
-    avatar: "/assets/jennifer-williams.png",
+    avatar: "assets/jennifer-williams.png",
     recommendation: "In my role as a Partner Technical Advisor at Microsoft, I had the privilege of leading Shashank. I would recommend him to any team seeking someone who excels under pressure, solves complex, high-stakes issues with empathy, and has the technical skills to match.",
     linkedin: "https://www.linkedin.com/in/-jenn-williams/",
   },
   {
     name: "Richard Pallangyo",
     title: "MS in Data Science at the University of Washington",
-    avatar: "/assets/richard-pallangyo.png",
+    avatar: "assets/richard-pallangyo.png",
     recommendation: "As a technical lead, I had the privilege of working with Shashank, whose remarkable ability and determination to achieve results are truly admirable. Shashank joined my team with the mission to empower Microsoft clients in tackling Azure Machine Learning and Artificial Intelligence challenges. His exceptional technical expertise in Python, ML, AI, and cloud technologies positions him as an invaluable asset.\n\nDespite the initial hurdles of being new to a team, Shashank's quick learning aptitude and excellent interpersonal skills have rendered his interactions with our clients not just successful, but exceptional. Clients consistently leave with innovative solutions that drive their projects forward.\n\nMoreover, his collaborative spirit and readiness to assist make him a standout candidate for any team in need of expertise in data and AI. Whether it's as a Data Engineer, AI Engineer, Machine Learning Engineer, Data Scientist, or Data Analyst, Shashank is prepared to contribute meaningfully and elevate any project and team he's involved in.",
     linkedin: "https://www.linkedin.com/in/rapaugustino/",
   }
