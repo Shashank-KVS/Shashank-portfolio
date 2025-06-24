@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
-import { User, Brain } from "lucide-react";
+import { User, Brain, Award } from "lucide-react";
 import { personalInfo } from "@/lib/data";
+
+const iconMap = {
+  microsoft: Award, // Placeholder
+  brain: Brain,
+  python: Award, // Placeholder
+  udemy: Award,
+  ibm: Award, // Placeholder for IBM
+};
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-muted/50">
+    <section id="about" className="py-20 bg-muted/50" aria-label="About Me Section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -41,21 +49,8 @@ export default function AboutSection() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="w-full h-full rounded-2xl overflow-hidden">
-                  <img src="/assets/shashank.jpg" alt="Shashank Professional Photo" className="w-full h-full rounded-2xl object-cover" />
+                  <img src="/assets/Shashank-1.png" alt="Professional photo of Shashank Kowtharapu" className="w-full h-full rounded-2xl object-cover" loading="lazy" width="400" height="400" />
                 </div>
-              </motion.div>
-              <motion.div 
-                className="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-full"
-                animate={{ 
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <Brain className="w-8 h-8" />
               </motion.div>
             </div>
           </motion.div>

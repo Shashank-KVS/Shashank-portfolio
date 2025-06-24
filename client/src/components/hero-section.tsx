@@ -12,7 +12,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center hero-bg relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex items-center justify-center hero-bg relative overflow-hidden" aria-label="Hero Section">
       <div className="absolute inset-0 z-0 opacity-5">
         <div className="grid grid-cols-12 gap-4 h-full">
           <div className="col-span-12 h-full bg-gradient-to-br from-primary to-primary/50"></div>
@@ -43,8 +43,8 @@ export default function HeroSection() {
                 ease: "easeInOut"
               }}
             >
-              <div className="w-full h-full rounded-full overflow-hidden">
-                <img src="/assets/shashank.jpg" alt="Venkata Shashank Kowtharapu" className="w-full h-full rounded-full object-cover" />
+              <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
+                <img src="/assets/shashank.jpg" alt="Professional headshot of Venkata Shashank Kowtharapu" className="w-full h-full rounded-full object-cover" loading="lazy" width="256" height="256" />
               </div>
             </motion.div>
           </motion.div>

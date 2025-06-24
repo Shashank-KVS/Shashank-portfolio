@@ -8,6 +8,7 @@ const navItems = [
   { href: "#hero", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
+  { href: "#work-experience", label: "Work Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
@@ -30,12 +31,13 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div 
-            className="text-2xl font-bold gradient-text cursor-pointer"
+            className="flex items-center space-x-3 text-2xl font-bold gradient-text cursor-pointer"
             onClick={() => scrollTo("#hero")}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Shashank
+            <img src="/assets/shashank.jpg" alt="Shashank" className="w-8 h-8 rounded-full" />
+            <span>Shashank</span>
           </motion.div>
 
           {/* Desktop Navigation */}

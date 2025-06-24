@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ExternalLink, Bot, Cog, Brain } from "lucide-react";
+import { ArrowRight, ExternalLink, Bot, Cog, Brain, Rocket } from "lucide-react";
 import { blogPosts, personalInfo } from "@/lib/data";
 
 const iconMap = {
   robot: Bot,
   cogs: Cog,
   brain: Brain,
+  rocket: Rocket,
 };
 
 export default function BlogSection() {

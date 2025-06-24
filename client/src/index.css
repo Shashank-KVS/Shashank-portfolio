@@ -119,4 +119,8 @@
   .project-gradient {
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
   }
+
+  .input {
+    color: #111 !important;
+  }
 }

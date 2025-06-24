@@ -2,8 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github, FileText, ChartLine, Cloud, Brain, Sprout, Calculator, Users } from "lucide-react";
-import { projects } from "@/lib/data";
+import { ExternalLink, Github, FileText, ChartLine, Cloud, Brain, Sprout, Calculator, BookOpen } from "lucide-react";
+import { projects, personalInfo } from "@/lib/data";
 
 const iconMap = {
   "chart-line": ChartLine,
@@ -11,7 +11,7 @@ const iconMap = {
   "brain": Brain,
   "seedling": Sprout,
   "calculator": Calculator,
-  "traffic-light": Users,
+  "book-open": BookOpen,
 };
 
 const filterCategories = [
@@ -87,17 +87,18 @@ export default function ProjectsSection() {
               return (
                 <motion.div
                   key={project.id}
-                  className="bg-card rounded-xl shadow-lg overflow-hidden card-hover"
+                  className="bg-card rounded-xl shadow-lg overflow-hidden card-hover border border-black/10 dark:border-border/80"
                   layout
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -5, scale: 1.02 }}
+                  aria-label={`Project: ${project.title}`}
                 >
                   {/* Project Image/Icon */}
                   <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
-                    <IconComponent className="text-white text-4xl" />
+                    <IconComponent className="text-white text-4xl" aria-label={`${project.title} icon`} />
                   </div>
                   
                   <div className="p-6">
@@ -181,6 +182,24 @@ export default function ProjectsSection() {
               );
             })}
           </AnimatePresence>
+        </motion.div>
+        
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
+          <Button
+            asChild
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg font-semibold"
+            size="lg"
+          >
+            <a href={personalInfo.github} target="_blank" rel="noopener noreferrer">
+              View All Projects <Github className="ml-2 w-5 h-5" />
+            </a>
+          </Button>
         </motion.div>
       </div>
     </section>

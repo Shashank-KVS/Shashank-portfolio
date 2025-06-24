@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Venkata Shashank Kowtharapu",
-  title: "Generative AI Scientist & MLOps Engineer",
+  title: "Generative AI Scientist / MLOps Engineer / AI Engineer / Machine Learning Engineer",
   email: "kvshashank10081998@gmail.com",
   phone: "+1 (343) 989-4078",
   location: "Mississauga, Ontario, Canada",
@@ -83,28 +83,52 @@ export const skills = [
 
 export const certifications = [
   {
-    name: "Azure AI Fundamentals",
-    provider: "Microsoft Azure",
-    icon: "microsoft",
-    link: "https://learn.microsoft.com/en-us/credentials/"
+    name: "Linux Mastery",
+    provider: "Udemy",
+    icon: "udemy",
+    link: "https://www.udemy.com/certificate/UC-5a0e6b6c-bb1a-4190-a00d-07bf993b20b0/"
   },
   {
-    name: "Azure Administrator",
-    provider: "Microsoft Azure",
-    icon: "microsoft",
-    link: "https://learn.microsoft.com/en-us/credentials/"
+    name: "Data analysis with Python",
+    provider: "IBM",
+    icon: "ibm",
+    link: "https://drive.google.com/file/d/1gLRdJ-yF5dbItFeQDW95E066BDdi1Rr5/view?usp=share_link"
   },
   {
-    name: "Generative AI Specialist",
-    provider: "Azure AI",
+    name: "MachineLearning LLM",
+    provider: "DeepLearning.AI",
     icon: "brain",
-    link: "https://learn.microsoft.com/en-us/credentials/"
+    link: "https://drive.google.com/file/d/1Be57TfLzGXp4g4uRM6qIJkfIwWNtLwd3/view?usp=sharing"
   },
   {
-    name: "Python Professional",
-    provider: "Advanced Python",
-    icon: "python",
-    link: "https://www.python.org/success-stories/category/software-development/"
+    name: "AZAI GenAI",
+    provider: "Microsoft Azure",
+    icon: "brain",
+    link: "https://drive.google.com/file/d/17tuvhf_SgHof1mXwCTxohy_U__Up0Gpe/view?usp=sharing"
+  }
+];
+
+export const recommendations = [
+  {
+    name: "Yu Han Mao",
+    title: "Customer-obsessed data plumber",
+    avatar: "/assets/yu-han-mao.png", // Replace with actual image
+    recommendation: "I worked with Shashank in the Azure Machine Learning team at LTIMindtree. He was a notably fast learner of complex, messy technologies in cloud data engineering, and good at thinking on his feet to adapt to constantly changing features and requirements. Most importantly, I really enjoyed his enthusiasm and the sense of humour he brought to the team. I miss working with him and would highly recommend him for positions requiring both deep technical knowledge and good team spirit.",
+    linkedin: "https://www.linkedin.com/in/yu-han-mao/",
+  },
+  {
+    name: "Jennifer Williams",
+    title: "Technical Solutions & Data Specialist | SQL • API Integrations • Power BI",
+    avatar: "/assets/jennifer-williams.png", // Replace with actual image
+    recommendation: "In my role as a Partner Technical Advisor at Microsoft, I had the privilege of leading Shashank. I would recommend him to any team seeking someone who excels under pressure, solves complex, high-stakes issues with empathy, and has the technical skills to match.",
+    linkedin: "https://www.linkedin.com/in/-jenn-williams/",
+  },
+  {
+    name: "Richard Pallangyo",
+    title: "MS in Data Science at the University of Washington",
+    avatar: "/assets/richard-pallangyo.png", // Replace with actual image
+    recommendation: "As a technical lead, I had the privilege of working with Shashank, whose remarkable ability and determination to achieve results are truly admirable. Shashank joined my team with the mission to empower Microsoft clients in tackling Azure Machine Learning and Artificial Intelligence challenges. His exceptional technical expertise in Python, ML, AI, and cloud technologies positions him as an invaluable asset.\n\nDespite the initial hurdles of being new to a team, Shashank's quick learning aptitude and excellent interpersonal skills have rendered his interactions with our clients not just successful, but exceptional. Clients consistently leave with innovative solutions that drive their projects forward.\n\nMoreover, his collaborative spirit and readiness to assist make him a standout candidate for any team in need of expertise in data and AI. Whether it's as a Data Engineer, AI Engineer, Machine Learning Engineer, Data Scientist, or Data Analyst, Shashank is prepared to contribute meaningfully and elevate any project and team he's involved in.",
+    linkedin: "https://www.linkedin.com/in/rapaugustino/",
   }
 ];
 
@@ -116,7 +140,7 @@ export const projects = [
     date: "Mar 2025",
     category: ["ai"],
     tags: ["Python", "ML", "DistilBERT"],
-    github: "https://github.com/Shashank-KVS/ai-financial-risk-monitor",
+    github: "https://github.com/Shashank-KVS/AI-Financial-Risk-Monitor",
     medium: "https://medium.com/@kvshashank10081998/ai-financial-risk-monitoring",
     icon: "chart-line",
     gradient: "from-emerald-400 to-teal-500"
@@ -128,7 +152,7 @@ export const projects = [
     date: "Feb 2025",
     category: ["cloud", "ai"],
     tags: ["Azure ML", "Serverless", "AI"],
-    github: "https://github.com/Shashank-KVS/deepseek-azure-ml-serverless",
+    github: "https://github.com/Shashank-KVS/DeepSeek-Azure-ML-Serverless-Custom-Filtering",
     medium: "https://medium.com/@kvshashank10081998/deepseek-azure-serverless",
     icon: "cloud",
     gradient: "from-blue-500 to-purple-600"
@@ -138,9 +162,9 @@ export const projects = [
     title: "Phi-4 Fine-Tuning NLP",
     description: "Domain-specific text generation using fine-tuned Phi-4 model with LoRA optimization for computational efficiency.",
     date: "Jan 2025",
-    category: ["ai"],
+    category: ["ai", "cloud"],
     tags: ["NLP", "LoRA", "Fine-tuning"],
-    github: "https://github.com/Shashank-KVS/phi-4-fine-tuning-nlp",
+    github: "https://github.com/Shashank-KVS/Phi-4-Fine-Tuning-NLP-Custom-Dataset-Training",
     medium: "https://medium.com/@kvshashank10081998/phi-4-fine-tuning",
     icon: "brain",
     gradient: "from-purple-500 to-pink-500"
@@ -172,44 +196,127 @@ export const projects = [
   },
   {
     id: 6,
-    title: "AI Traffic Signal Optimization",
-    description: "Government project implementing AI-powered traffic signal optimization reducing congestion by 15% at major intersections.",
-    date: "2018-2019",
+    title: "Stock Data Prediction",
+    description: "Financial analysis and stock prediction using historical data, Monte Carlo simulations, and portfolio optimization.",
+    date: "Oct 2021",
     category: ["ai"],
-    tags: ["Government", "AI", "IoT"],
-    github: "https://github.com/Shashank-KVS/traffic-signal-ai-optimization",
-    medium: "https://medium.com/@kvshashank10081998/traffic-signal-optimization",
-    icon: "traffic-light",
-    gradient: "from-yellow-400 to-orange-400"
+    tags: ["Python", "Data Analysis", "FinTech"],
+    github: "https://github.com/Shashank-KVS/Stock_Data_Prediction",
+    icon: "calculator",
+    gradient: "from-cyan-400 to-sky-500"
+  },
+  {
+    id: 7,
+    title: "100 Days of ML Code",
+    description: "A 100-day challenge covering fundamental Machine Learning concepts with code examples, from preprocessing to regression models.",
+    date: "Jan 2022",
+    category: ["ai"],
+    tags: ["Machine Learning", "Python", "100DaysOfCode"],
+    github: "https://github.com/Shashank-KVS/100_days_ML_Code",
+    icon: "book-open",
+    gradient: "from-rose-400 to-red-500"
   }
 ];
 
 export const blogPosts = [
   {
-    title: "The Future of Generative AI in Enterprise",
-    description: "Exploring how LLMs and generative AI are transforming business operations and decision-making processes...",
-    date: "Jan 15, 2025",
-    readTime: "5 min read",
-    link: "https://medium.com/@kvshashank10081998/generative-ai-enterprise-future",
-    icon: "robot",
-    gradient: "from-blue-500 to-purple-600"
+    title: "Beginner's Guide to Azure Machine Learning: Setting Up and Understanding Features",
+    description: "A beginner-friendly guide to getting started with Azure Machine Learning, from initial setup to understanding its core features.",
+    date: "Mar 20, 2025",
+    readTime: "8 min read",
+    link: "https://medium.com/@kvshashank10081998/beginners-guide-to-azure-machine-learning-setting-up-and-understanding-features-b03b10ce83a0",
+    icon: "rocket",
+    gradient: "from-orange-400 to-red-400"
   },
   {
-    title: "MLOps Best Practices with Azure ML",
-    description: "A comprehensive guide to implementing production-ready ML pipelines using Azure Machine Learning Studio...",
-    date: "Dec 20, 2024",
-    readTime: "8 min read",
-    link: "https://medium.com/@kvshashank10081998/mlops-azure-best-practices",
+    title: "How Prompt Flow works and its key features in Azure Machine Learning",
+    description: "An introduction to Azure Machine Learning Prompt Flow, covering its key features and how it empowers AI development.",
+    date: "Mar 10, 2025",
+    readTime: "7 min read",
+    link: "https://medium.com/@kvshashank10081998/unlocking-the-power-of-ai-with-azure-machine-learning-prompt-flow-a55f17a63b74",
     icon: "cogs",
+    gradient: "from-blue-400 to-purple-400"
+  },
+  {
+    title: "Mastering Azure Machine Learning Prompt Flow: Advanced Techniques, Real-World Insights, and Best Practices",
+    description: "Explore advanced techniques, best practices, and real-world applications of Azure Machine Learning Prompt Flow.",
+    date: "Feb 25, 2025",
+    readTime: "10 min read",
+    link: "https://medium.com/@kvshashank10081998/mastering-azure-machine-learning-prompt-flow-advanced-techniques-real-world-insights-and-best-e949087b8ade",
+    icon: "brain",
     gradient: "from-green-400 to-blue-400"
   },
   {
-    title: "Fine-tuning LLMs for Domain-Specific Tasks",
-    description: "Deep dive into techniques for adapting large language models for specialized applications using LoRA and PEFT...",
-    date: "Nov 30, 2024",
-    readTime: "12 min read",
-    link: "https://medium.com/@kvshashank10081998/llm-fine-tuning-domain-specific",
-    icon: "brain",
-    gradient: "from-purple-500 to-pink-500"
+    title: "Securing Azure Machine Learning with Managed Virtual Network (VNet) Isolation",
+    description: "A guide to securing your Azure ML workspace using Managed Virtual Networks for robust data protection and isolation.",
+    date: "Feb 5, 2025",
+    readTime: "9 min read",
+    link: "https://medium.com/@kvshashank10081998/securing-azure-machine-learning-with-managed-virtual-network-vnet-isolation-aebe4b9fcb76",
+    icon: "robot",
+    gradient: "from-purple-400 to-pink-400"
+  }
+];
+
+export const workExperience = [
+  {
+    company: "LTIMindtree",
+    role: "Associate Data Scientist",
+    location: "Canada",
+    duration: "Dec 2023 - Present",
+    bullets: [
+      "Architected and optimized Azure Machine Learning (AML) workflows, enhancing LLM accuracy by 30% and reducing training latency by 25% through advanced AutoML and prompt flow optimization.",
+      "Developed and deployed scalable MLOps pipelines using Azure ML SDK, Designer, and CI/CD automation, achieving a 15% improvement in model training efficiency and ensuring high availability in production environments.",
+      "Used PySpark on Azure Spark compute clusters for distributed processing and feature engineering of large-scale datasets, enabling scalable analysis in ML pipelines.",
+      "Designed and troubleshot complex AI pipelines, integrating Azure OpenAI Services, AutoML, and fine-tuned LLMs, boosting NLP processing speed by 30% while improving content safety filtering.",
+      "Optimized Azure ML environments, managing DNS lookups, VNet integrations, and Compute Instance provisioning, leading to a 20% increase in system performance and enhanced scalability.",
+      "Designed and deployed RESTful APIs for integrating ML models into production pipelines, enabling seamless interaction with business applications.",
+      "Leveraged Azure Document Intelligence and AI Vision to automate document processing and image recognition, improving data processing efficiency by 20% and recognition accuracy by 35%.",
+      "Led and mentored a team of 10 engineers in Generative AI and MLOps, fostering expertise in LLM fine-tuning, deployment strategies, and AI model evaluation, increasing team productivity by 30%.",
+      "Collaborated with business stakeholders and cross-functional teams to align AI solutions with business objectives, ensuring transparency and measurable impact."
+    ]
+  },
+  {
+    company: "En Solution",
+    role: "AI Developer Internship",
+    location: "Canada",
+    duration: "Sep 2023 - Nov 2023",
+    bullets: [
+      "Developed an AI-driven chatbot using Llama and Hugging Face, integrating custom fine-tuned LLMs to improve user engagement by 40% and enhance multi-turn conversation handling.",
+      "Optimized chatbot adaptability and response accuracy by implementing advanced NLP techniques, data preprocessing pipelines, and dynamic prompt engineering, achieving a 25% increase in response accuracy.",
+      "Built a scalable Retrieval-Augmented Generation (RAG) pipeline using LangChain and vector databases for context-aware query retrieval, reducing latency by 30%."
+    ]
+  },
+  {
+    company: "Oracle",
+    role: "Associate Software Engineer",
+    location: "US-Remote",
+    duration: "Oct 2021 - Apr 2022",
+    bullets: [
+      "Designed and automated CI/CD pipelines for microservice applications using Jenkins, Bash, and Python, reducing deployment time by 40% and enhancing operational efficiency.",
+      "Implemented end-to-end build automation by integrating SVN to Git migration, ensuring version control integrity, artifact management, and seamless CI/CD workflows.",
+      "Developed and optimized Python-based backend services, resolving infrastructure bottlenecks, improving system scalability, and ensuring reliable client-facing deployments through automated troubleshooting."
+    ]
+  },
+  {
+    company: "Amrita Vishwa Vidyapeetham",
+    role: "Research Assistant",
+    location: "India",
+    duration: "Oct 2020 - Sep 2021",
+    bullets: [
+      "Developed AI-powered IoT frameworks with Edge Computing, optimizing real-time data processing pipelines for smart agriculture, improving operational efficiency by 30% through on-device inference and federated learning.",
+      "Engineered a hybrid Edge-Cloud architecture, integrating low-latency communication protocols and optimized data transmission, reducing latency by 25% and enhancing AI-driven decision-making for automated farming.",
+      "Designed FPGA-based hardware accelerators for Edge AI, optimizing CNN-based crop monitoring models, boosting inference speeds by 15%, and achieving energy-efficient AI deployment in IoT-driven environments."
+    ]
+  },
+  {
+    company: "Department of Science & Technology, Indian Government Project",
+    role: "IoT & AI Engineer",
+    location: "India",
+    duration: "Jun 2018 - May 2019",
+    bullets: [
+      "Developed an AI-powered traffic signal optimization system, reducing congestion by 15% at major intersections.",
+      "Designed machine learning models to predict peak-hour congestion patterns, improving traffic light synchronization by 20%.",
+      "Built an end-to-end data pipeline for real-time traffic feeds, enhancing prediction accuracy by 30%."
+    ]
   }
 ];

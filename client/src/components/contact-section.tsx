@@ -61,7 +61,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-muted/50">
+    <section id="contact" className="py-20 bg-muted/50" aria-label="Contact Section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -87,74 +87,58 @@ export default function ContactSection() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div
-            className="bg-card p-8 rounded-xl shadow-lg"
+            className="bg-card p-8 rounded-xl shadow-lg border border-black/10 dark:border-border/80"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  id="name"
-                  {...register("name")}
-                  className="mt-1"
-                  placeholder="Your full name"
-                />
-                {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
-                )}
+            <form
+              action="https://formspree.io/f/mwpbrazy"
+              method="POST"
+              className="space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="input"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="input"
+                  />
+                </div>
               </div>
-              
               <div>
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  id="email"
-                  type="email"
-                  {...register("email")}
-                  className="mt-1"
-                  placeholder="your.email@example.com"
-                />
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="subject">Subject</Label>
-                <Input
-                  id="subject"
-                  {...register("subject")}
-                  className="mt-1"
-                  placeholder="What's this about?"
-                />
-                {errors.subject && (
-                  <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
-                )}
-              </div>
-              
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea
+                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  Message
+                </label>
+                <textarea
                   id="message"
-                  {...register("message")}
+                  name="message"
                   rows={5}
-                  className="mt-1 resize-none"
-                  placeholder="Tell me about your project or question..."
+                  required
+                  className="input"
                 />
-                {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
-                )}
               </div>
-              
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-primary hover:bg-primary/90 text-white py-3 font-semibold"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
+              <Button type="submit" className="w-full">
+                Send Message
               </Button>
             </form>
           </motion.div>
@@ -162,7 +146,7 @@ export default function ContactSection() {
           {/* Contact Info */}
           <div className="space-y-8">
             <motion.div
-              className="bg-card p-8 rounded-xl shadow-lg"
+              className="bg-card p-8 rounded-xl shadow-lg border border-black/10 dark:border-border/80"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -175,7 +159,7 @@ export default function ContactSection() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Mail className="text-primary text-xl mr-4" />
+                  <Mail className="text-primary text-xl mr-4" aria-label="Email icon" />
                   <a 
                     href={`mailto:${personalInfo.email}`} 
                     className="text-foreground hover:text-primary transition-colors"
@@ -189,7 +173,7 @@ export default function ContactSection() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Phone className="text-primary text-xl mr-4" />
+                  <Phone className="text-primary text-xl mr-4" aria-label="Phone icon" />
                   <a 
                     href={`tel:${personalInfo.phone}`} 
                     className="text-foreground hover:text-primary transition-colors"
@@ -203,7 +187,7 @@ export default function ContactSection() {
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <MapPin className="text-primary text-xl mr-4" />
+                  <MapPin className="text-primary text-xl mr-4" aria-label="Location icon" />
                   <span className="text-foreground">
                     {personalInfo.location}
                   </span>
@@ -237,22 +221,18 @@ export default function ContactSection() {
 
             {/* Resume Download */}
             <motion.div
-              className="bg-card p-8 rounded-xl shadow-lg text-center"
+              className="bg-card p-6 rounded-lg shadow-md border border-black/10 dark:border-border/80"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <FileText className="text-primary text-4xl mb-4 mx-auto" />
               <h3 className="text-xl font-bold mb-4">Download Resume</h3>
-              <p className="text-muted-foreground mb-6">
-                Get a detailed overview of my experience and qualifications
+              <p className="text-muted-foreground mb-4">
+                Get a copy of my full resume.
               </p>
-              <Button
-                asChild
-                className="bg-primary hover:bg-primary/90 text-white px-6 py-3 font-semibold"
-              >
-                <a href="#" download="Venkata_Shashank_Kowtharapu_Resume.pdf">
+              <Button asChild className="w-full">
+                <a href="/assets/ShashankKV-Resume.pdf" download="ShashankKV-Resume.pdf">
                   <Download className="mr-2 w-4 h-4" />
                   Download PDF
                 </a>
@@ -261,6 +241,16 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
+
+      {/* Back to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 z-50 bg-primary text-white rounded-full p-3 shadow-lg hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary"
+        aria-label="Back to Top"
+        style={{ display: window.scrollY > 200 ? 'block' : 'none' }}
+      >
+        ↑
+      </button>
     </section>
   );
 }

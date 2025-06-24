@@ -15,7 +15,7 @@ const iconMap = {
 
 export default function SkillsSection() {
   return (
-    <section id="skills" className="py-20 bg-background">
+    <section id="skills" className="py-20 bg-background" aria-label="Skills and Certifications Section">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -45,7 +45,7 @@ export default function SkillsSection() {
             return (
               <motion.div
                 key={skillCategory.category}
-                className="bg-gradient-to-br from-card to-muted/30 p-6 rounded-xl card-hover border border-border/50"
+                className="bg-gradient-to-br from-card to-muted/30 p-6 rounded-xl card-hover border border-black/10 dark:border-border/80"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
@@ -54,7 +54,7 @@ export default function SkillsSection() {
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                    {IconComponent && <IconComponent className="text-primary text-2xl" />}
+                    {IconComponent && <IconComponent className="text-primary text-2xl" aria-label={`${skillCategory.category} icon`} />}
                   </div>
                   <h3 className="text-lg font-bold text-foreground">{skillCategory.category}</h3>
                 </div>
@@ -105,7 +105,7 @@ export default function SkillsSection() {
             return (
               <motion.div
                 key={cert.name}
-                className="bg-card p-6 rounded-xl shadow-lg card-hover text-center"
+                className="bg-card p-6 rounded-xl shadow-lg card-hover text-center border border-black/10 dark:border-border/80"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -113,7 +113,7 @@ export default function SkillsSection() {
                 whileHover={{ y: -5, scale: 1.02 }}
               >
                 <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="text-white text-2xl" />
+                  <IconComponent className="text-white text-2xl" aria-label={`${cert.name} icon`} />
                 </div>
                 <h4 className="font-bold mb-2">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground mb-4">
