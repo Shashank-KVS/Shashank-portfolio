@@ -49,7 +49,7 @@ export default function AboutSection() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="w-full h-full rounded-2xl overflow-hidden">
-                  <img src="/assets/Shashank-1.png" alt="Professional photo of Shashank Kowtharapu" className="w-full h-full rounded-2xl object-cover" loading="lazy" width="400" height="400" />
+                  <img src="assets/Shashank-1.png" alt="Professional photo of Shashank Kowtharapu" className="w-full h-full rounded-2xl object-cover" loading="lazy" width="400" height="400" />
                 </div>
               </motion.div>
             </div>

@@ -44,7 +44,7 @@ export default function HeroSection() {
               }}
             >
               <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
-                <img src="/assets/shashank.jpg" alt="Professional headshot of Venkata Shashank Kowtharapu" className="w-full h-full rounded-full object-cover" loading="lazy" width="256" height="256" />
+                <img src="assets/shashank.jpg" alt="Professional headshot of Venkata Shashank Kowtharapu" className="w-full h-full rounded-full object-cover" loading="lazy" width="256" height="256" />
               </div>
             </motion.div>
           </motion.div>

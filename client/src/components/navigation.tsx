@@ -36,7 +36,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img src="/assets/shashank.jpg" alt="Shashank" className="w-8 h-8 rounded-full" />
+            <img src="assets/shashank.jpg" alt="Shashank" className="w-8 h-8 rounded-full" />
             <span>Shashank</span>
           </motion.div>
 
