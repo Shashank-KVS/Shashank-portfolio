@@ -7,9 +7,20 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
+// Custom hook for hash-based routing
+function useHashLocation() {
+  return [
+    window.location.hash.replace(/^#/, "") || "/",
+    (to) => {
+      window.location.hash = to;
+    },
+  ];
+}
+
 function Router() {
+  const [location, setLocation] = useHashLocation();
   return (
-    <Switch>
+    <Switch location={location}>
       <Route path="/" component={Home} />
       <Route component={NotFound} />
     </Switch>
